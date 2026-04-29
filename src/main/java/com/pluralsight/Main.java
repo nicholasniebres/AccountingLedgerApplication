@@ -24,12 +24,12 @@ public class Main {
         System.out.println("\nWelcome to Bank of the Bay!");
 
         while (true) {
-            System.out.println("\n--- HOME SCREEN ---\n");
+            System.out.println("--- HOME SCREEN ---");
             System.out.println("D) Add Deposit");
             System.out.println("P) Make Payment");
             System.out.println("L) Ledger");
             System.out.println("X) Exit");
-            System.out.print("\nSelect an option: ");
+            System.out.print("Select an option: ");
             // Store the input into a variable and force uppercase it
             String choice = scanner.nextLine().toUpperCase();
 
@@ -81,13 +81,13 @@ public class Main {
         // So when stores as while true it run until false
         while (inLedger) {
 
-            System.out.println("\n--- LEDGER MENU ---\n");
+            System.out.println("--- LEDGER MENU ---");
             System.out.println("A) All");
             System.out.println("D) Deposits");
             System.out.println("P) Payments");
             System.out.println("R) Reports");
             System.out.println("H) Home");
-            System.out.print("\nSelect an option: ");
+            System.out.print("Select an option: ");
             String input = scanner.nextLine().toUpperCase();
 
             switch (input) {
@@ -138,14 +138,14 @@ public class Main {
         boolean inReports = true;
 
         while (inReports) {
-            System.out.println("\n--- REPORTS ---\n");
+            System.out.println("--- REPORTS ---");
             System.out.println("1) Month to Date");
             System.out.println("2) Previous Month");
             System.out.println("3) Year to Date");
             System.out.println("4) Previous Year");
             System.out.println("5) Vendor Search");
             System.out.println("O) Back");
-            System.out.print("\nSelect an option: ");
+            System.out.print("Select an option: ");
             String reportChoice = scanner.nextLine(); // No toUpperCase needed for numbers
             LocalDate now = LocalDate.now();
 
@@ -223,7 +223,7 @@ public class Main {
 
     private static void displayReport(String title, List<Transaction> reportData) {
 
-        System.out.println("\n( " + title + " )\n");
+        System.out.println("( " + title + " )");
 
         if (reportData.isEmpty()) {
             System.out.println("No transactions found for this period.");
@@ -234,7 +234,7 @@ public class Main {
             for (Transaction t : reportData) {
                 System.out.println("   Date   |   Time   |   Description   |   Vendor   |   Amount   ");
                 System.out.println("-----------------------------------------------------------------");
-                System.out.printf("%s | %s | %s | %s | $%.2f\n",
+                System.out.printf("%s | %s | %s | %s | $%.2f",
                         t.getDate(), t.getTime(), t.getDescription(), t.getVendor(), t.getAmount());
             }
         }
