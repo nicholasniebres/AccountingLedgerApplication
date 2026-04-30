@@ -76,7 +76,7 @@ public class Ledger {
         return payments;
     }
 
-
+    /** Bubble sort method */
     private void sortByDate(List<Transaction> list) {
         // Assigns the whole list to variable n
         int n = list.size();
@@ -96,7 +96,7 @@ public class Ledger {
                 }
                 // If the dates are identical, check the time
                 else if (t1.getDate().equals(t2.getDate())) {
-
+                    // Another nested conditional checking/sorting by time
                     if (t1.getTime().isBefore(t2.getTime())) {
                         list.set(j, t2);
                         list.set(j + 1, t1);

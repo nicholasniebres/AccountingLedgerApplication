@@ -21,7 +21,7 @@ public class Main {
         for (Transaction t : savedTransactions) {
             ledger.addTransaction(t);
         }
-        System.out.println("\nWelcome to Bank of the Bay!");
+        System.out.println("\nWelcome to Bank of the Bay.");
 
         while (true) {
             System.out.println("--- HOME SCREEN ---");

@@ -21,7 +21,7 @@ public class Transaction {
         this.amount = amount;
     }
 
-    // Getters
+    // Getters (No setters for data integrity)
     public LocalDate getDate() {
         return date;
     }
